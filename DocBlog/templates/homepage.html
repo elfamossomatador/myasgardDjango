@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+        <title>MyAsgard</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}"  >
+
+    </head>
+    <body>
+        <div class="top">
+            <h1><a href="{% url 'homepage' %}">MyAsgard</a></h1>
+            <div class="search_bar">
+                <form action="{% url 'product_list' %}">
+                    <label for="reserch"></label>
+                    <input id="reserch" type="text" name="reserch" placeholder="type your search here...">
+                    <button type="submit"><img src="{% static 'image_site/search_icon.png' %}"></button>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="tool_bar">
+            <home>
+                <h3><a href="{% url 'homepage' %}">Accueil</a></h3>
+            </home>
+            <films>
+                <h3><a href="{% url 'blog-films' %}">Films</a></h3>
+            </films>
+            <series>
+                <h3><a href="{% url 'blog-series' %}">Séries</a></h3>
+            </series>
+            <books>
+                <h3><a href="{% url 'blog-books' %}">Livres</a></h3>
+            </books>
+        </div>
+        <hr>
+        <div class="content">
+            <div class="content_text">
+                <h2>Dernières sorties :</h2>
+            </div>
+            <div class="swiper slide_contener">
+                <div class="swiper-wrapper">
+                  <div class="card_1 swiper-slide">
+                    <div class="card_content">
+                        <a href="{% url 'product' slug='thor_love_and_thunder' %}"><img src="{% static 'image_site/2411535.webp' %}"></a>
+                    </div>
+                  </div>
+                  <div class="card_2 swiper-slide">
+                    <div class="card_content">
+                        <a href="{% url 'product' slug='top_gun_maverick' %}"><img src="{% static 'image_site/top-gun.jfif' %}"></a>
+                    </div>
+                  </div>
+                  <div class="card_1 swiper-slide">
+                    <div class="card_content">
+                        <a href="{% url 'product' slug='jurassic_world_le_monde_d_apres' %}"><img src="{% static 'image_site/jurassic_world.webp' %}"></a>
+                    </div>
+                  </div>
+                  <div class="card_2 swiper-slide">
+                    <div class="card_content">
+                        <a href="{% url 'product' slug='le_flambeau' %}"><img src="{% static 'image_site/le-flambeau.jpg' %}"></a>
+                    </div>
+                  </div>
+                  <div class="card_1 swiper-slide">
+                    <div class="card_content">
+                        <a href="{% url 'product' slug='obi_wan_kenobi' %}"><img src="{% static 'image_site/obi_wan.jpg' %}"></a>
+                    </div>
+                  </div>
+                  <div class="card_2 swiper-slide">
+                    <div class="card_content">
+                        <a href="{% url 'product' slug='uncharted' %}"><img src="{% static 'image_site/uncharted.jpg' %}"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+        </div>
+
+        <!-- Swiper JS -->
+        <script src="{% static 'javascript/swiper-bundle.min.js' %}"></script>
+
+        <script src="{% static 'javascript/code_js.js' %}"></script>
+    </body>
+</html>

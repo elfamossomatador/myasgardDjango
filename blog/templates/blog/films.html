@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+        <title>MyAsgard</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}"  >
+
+    </head>
+    <body>
+        <div class="top">
+            <h1><a href="{% url 'homepage' %}">MyAsgard</a></h1>
+            <div class="search_bar">
+                <form action="{% url 'product_list' %}">
+                    <label for="reserch"></label>
+                    <input id="reserch" type="text" name="reserch" placeholder="type your search here...">
+                    <button type="submit"><img src="{% static 'image_site/search_icon.png' %}"></button>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="tool_bar">
+            <home>
+                <h3><a href="{% url 'homepage' %}">Accueil</a></h3>
+            </home>
+            <films>
+                <h3><a href="{% url 'blog-films' %}">Films</a></h3>
+            </films>
+            <series>
+                <h3><a href="{% url 'blog-series' %}">Séries</a></h3>
+            </series>
+            <books>
+                <h3><a href="{% url 'blog-books' %}">Livres</a></h3>
+            </books>
+        </div>
+        <hr>
+
+
+        <!-- Fin base -->
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/blog-style.css' %}">
+
+        <div class="container_list">
+
+            <h2 class="annonce_title">Tous les films :</h2>
+            <h3>
+                <ul class="list">
+                    {% for product in products %}
+                    {% if product.type == 0 %}
+                    <li><a class="link" href="{{ product.get_absolute_url }}">{{ product.name }}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </h3>
+        </div>
+
+    </body>
+</html>
