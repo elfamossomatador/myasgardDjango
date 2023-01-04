@@ -17,7 +17,6 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 from .views import index, product_detail, product_list
-
 from DocBlog import settings
 
 urlpatterns = [
@@ -26,4 +25,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('product/<str:slug>/', product_detail, name="product"),
     path('search_venues/)', product_list, name="product_list"),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+
+#urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

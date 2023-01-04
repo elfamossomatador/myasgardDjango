@@ -1,0 +1,237 @@
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0px;
+    height: 2000px;
+    background-image: url("image_css/end_site.png");
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+    background-position: bottom;
+    background-size: contain;
+    background-color: black;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    height: 185px;
+    background-image: url("image_css/image_site.png");
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+    background-position: top;
+    background-size: cover;
+}
+
+h1 {
+    align-self: center;
+    margin-top: 5%;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.content_text{
+    display: flex;
+    justify-content: center;
+}
+
+
+div h2 {
+    margin-top: 5%;
+    color: white;
+}
+
+
+.search_bar {
+    align-self: flex-end;
+    margin-bottom: 1%;
+    margin-left: 2%;
+}
+
+div form {
+    width: 300px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 50px;
+    border-radius: 60px;
+    backdrop-filter: blur(1px) saturate(180%);
+}
+
+form input {
+    background: transparent;
+    flex: auto;
+    border: 0;
+    padding: 10px 20px;
+    outline: none;
+    font-size: 15px;
+    color: white;
+}
+
+::placeholder {
+    color:rgba(227, 211, 211, 0.795)
+}
+
+form img {
+    background: transparent;
+    width: 17px;
+}
+
+form button {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin-right: 15px;
+    border: 0;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: rgba(227, 211, 211, 0.795);
+    cursor: pointer;
+}
+
+.tool_bar {
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px;
+    justify-content: center;
+}
+
+.tool_bar h3 {
+    cursor: pointer;
+}
+
+.tool_bar a{
+    text-decoration: none;
+    color: white;
+}
+
+home {
+    display: inline-flex;
+    justify-content: center;
+    border: 1px solid;
+    border-right-color: white;
+    border-left-color: white;
+}
+
+films {
+    display: inline-flex;
+    justify-content: center;
+    border: 1px solid;
+    border-right-color: white;
+    border-left-color: white;
+}
+
+series {
+    display: inline-flex;
+    justify-content: center;
+    border: 1px solid;
+    border-right-color: white;
+    border-left-color: white;
+}
+
+books {
+    display: inline-flex;
+    justify-content: center;
+    border: 1px solid;
+    border-right-color: white;
+    border-left-color: white;
+}
+
+hr {
+    margin: 0px;
+    border: 0px;
+    height: 1px;
+    background: white;
+}
+
+h3 {
+    color: white;
+}
+
+
+.content {
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+.content_text {
+    width: 55%;
+    margin-top: 4%;
+    align-self: center;
+    justify-self: flex-end;
+    border-bottom: 1px;
+    border-color: white;
+    display: inline-flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid;
+    border-bottom-color: white;
+}
+
+
+h2 {
+    color: white;
+    margin: 0px;
+    cursor: default;
+}
+
+
+.slide_contener {
+    width: 90%;
+    height: 560px;
+}
+
+.card_1 {
+    display: flex;
+    justify-content: end;
+    background-color: transparent;
+}
+
+.card_2 {
+    display: flex;
+    justify-content: start;
+    background-color: transparent;
+}
+
+.card_content {
+    padding: 15px;
+    width: 348px;
+    height: 500px;
+}
+
+
+.card_content img {
+    justify-self: end;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    border: solid 1px gray;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card_content img:hover {
+    opacity: 0.5;
+}
+
+
+
+
+/* Pages Films/Series/Books */
+
+.content_title{
+    color: white;
+}
