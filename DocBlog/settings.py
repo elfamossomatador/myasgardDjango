@@ -145,4 +145,5 @@ DATABASES['default'].update(db_from_env)
 
 
 CSRF_TRUSTED_ORIGINS = ['https://myasgard.up.railway.app/']
+CSRF_COOKIE_DOMAIN = '127.0.0.1'
 
