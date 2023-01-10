@@ -143,3 +143,6 @@ django_heroku.settings(locals())
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
+
+CSRF_TRUSTED_ORIGINS = ['https://myasgard.up.railway.app/']
+
