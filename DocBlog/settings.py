@@ -144,6 +144,5 @@ db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
 
-CSRF_TRUSTED_ORIGINS = ['https://myasgard.up.railway.app/']
-CSRF_COOKIE_DOMAIN = '127.0.0.1'
+CSRF_TRUSTED_ORIGINS = ['https://*.myasgard.up.railway.app', 'https://*.127.0.0.1']
 
